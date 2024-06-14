@@ -53,3 +53,5 @@ src_singleheader/
 
 # doc files
 doc/doxygen
+
+bazel-*

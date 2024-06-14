@@ -1,0 +1,16 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "ryml",
+    srcs = glob([
+        "src/**/*.cpp",
+        "src/**/*.hpp",
+    ]),
+    hdrs = glob(["src/**/*.hpp"]),
+    includes = ["src"],
+    deps = [
+        "@c4core",
+    ],
+)

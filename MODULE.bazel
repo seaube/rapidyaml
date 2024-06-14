@@ -1,0 +1,12 @@
+module(name = "rapidyaml", version = "0.7.0")
+
+bazel_dep(name = "rules_cc", version = "0.0.9")
+bazel_dep(name = "doctest", version = "2.4.11")
+bazel_dep(name = "c4core", version = "0.2.1")
+
+git_override(
+    module_name = "c4core",
+    commit = "d0684905b581778763af4926b1dd17551858da4a",
+    remote = "git@github.com:seaube/c4core.git",
+    init_submodules = True,
+)
